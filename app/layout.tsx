@@ -21,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <ClerkProvider>
-      <html lang="en">
+      <html lang="en" className="bg-gray-200">
         <body className={inter.className}>{children}</body>
       </html>
     </ClerkProvider>
