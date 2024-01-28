@@ -1,4 +1,4 @@
-import MobileIntro from "@/components/ui/mobile-intro/MobileIntro";
+import MobileIntro from "@/components/mobile-intro/MobileIntro";
 
 export default function Home() {
   return (
