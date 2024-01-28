@@ -8,6 +8,7 @@ const Users = async () => {
       User: {user?.firstName}
       createdAt: {user?.createdAt}
       other:{user?.imageUrl}
+      <br />
       others:{user?.username}
       <UserButton afterSignOutUrl="/" />
     </div>
