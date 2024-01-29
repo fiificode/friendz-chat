@@ -5,7 +5,11 @@ import React from "react";
 import DesktopItem from "./DesktopItem";
 import { MessageCircleHeart } from "lucide-react";
 import { UserButton } from "@clerk/nextjs";
+import { User } from "@prisma/client";
 
+interface DesktopProps {
+  user: User;
+}
 const DesktopSidebar = () => {
   const routes = useRoutes();
   const [isOpen, setIsOpen] = React.useState(false);

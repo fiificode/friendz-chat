@@ -4,7 +4,7 @@ import useConversation from "@/hooks/useConversation";
 import useRoutes from "@/hooks/useRoutes";
 import React from "react";
 import MobileItem from "./MobileItem";
-import { UserButton } from "@clerk/nextjs";
+import { UserButton, UserProfile } from "@clerk/nextjs";
 
 const MobileNav = () => {
   const routes = useRoutes();
@@ -18,7 +18,7 @@ const MobileNav = () => {
     <div className="fixed justify-between w-full bottom-0 z-40 flex items-center bg-white border-t-[1px] lg:hidden">
       {routes.map((route) => (
         <MobileItem
-          key={route.href}
+          key={route.label}
           label={route.label}
           href={route.href}
           active={route.active}

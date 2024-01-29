@@ -1,7 +1,7 @@
 import { usePathname } from "next/navigation";
 import useConversation from "./useConversation";
 import { useMemo } from "react";
-import { MessageSquare, User2 } from "lucide-react";
+import { CogIcon, MessageSquare, User2 } from "lucide-react";
 import { UserButton } from "@clerk/nextjs";
 
 const useRoutes = () => {
@@ -24,6 +24,12 @@ const useRoutes = () => {
       },
       {
         label: "Settings",
+        href: "/settings",
+        icon: <CogIcon />,
+        active: pathname === "/settings",
+      },
+      {
+        label: "Profile",
         icon: <UserButton />,
       },
     ],
