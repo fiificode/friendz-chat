@@ -1,10 +1,11 @@
 import db from "@/libs/prismadb";
-import { currentUser } from "@clerk/nextjs";
+import { clerkClient, currentUser } from "@clerk/nextjs";
 
 const getUsers = async () => {
-  const userSession = await currentUser();
+  const user = await currentUser();
+  const userCurrent = await clerkClient.users.getUser(user?.id as string);
 
-  if (!userSession) {
+  if (!user) {
     return [];
   }
 
@@ -15,7 +16,7 @@ const getUsers = async () => {
       },
       where: {
         NOT: {
-          username: userSession.username as string,
+          username: userCurrent.username as string,
         },
       },
     });
