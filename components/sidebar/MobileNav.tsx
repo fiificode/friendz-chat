@@ -4,7 +4,6 @@ import useConversation from "@/hooks/useConversation";
 import useRoutes from "@/hooks/useRoutes";
 import React from "react";
 import MobileItem from "./MobileItem";
-import { UserButton, UserProfile } from "@clerk/nextjs";
 
 const MobileNav = () => {
   const routes = useRoutes();

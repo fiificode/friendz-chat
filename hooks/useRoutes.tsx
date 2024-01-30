@@ -30,7 +30,7 @@ const useRoutes = () => {
       },
       {
         label: "Profile",
-        icon: <UserButton />,
+        icon: <UserButton afterSignOutUrl="/" />,
       },
     ],
     [pathname, conversationId]

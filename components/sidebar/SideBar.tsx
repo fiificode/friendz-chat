@@ -1,11 +1,10 @@
 import DesktopSidebar from "./DesktopSidebar";
 import MobileNav from "./MobileNav";
-import { currentUser } from "@clerk/nextjs";
+import { clerkClient, currentUser } from "@clerk/nextjs";
 
 async function Sidebar({ children }: { children: React.ReactNode }) {
-  const user = await currentUser();
-  console.log(user);
-
+  // const user = await currentUser();
+  // console.log("user", user);
   return (
     <div className="h-full">
       <DesktopSidebar />

@@ -5,7 +5,7 @@ import React from "react";
 const Users = async () => {
   const user = await currentUser();
   return (
-    <div className="hidden lg:block lg:pl-80 h-full">
+    <div className="hidden lg:block lg:pl-[280px] h-full">
       <EmptyState />
     </div>
   );
